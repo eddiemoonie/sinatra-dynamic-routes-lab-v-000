@@ -29,7 +29,7 @@ class App < Sinatra::Base
     operation = params[:operation]
     if operation == "add"
       answer = number1 + number2
-    elsif operation == "submtraction"
+    elsif operation == "subtraction"
       answer = number1 - number2
     elsif operation == "multiply"
       answer = number1 * number2
