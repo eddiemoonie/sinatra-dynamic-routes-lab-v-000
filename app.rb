@@ -24,7 +24,21 @@ class App < Sinatra::Base
   end
 
   get "/:operation/:number1/:number2" do
-    @result = params[:number1].to_i params[:operation].to_sym params[:number2].to_i
+    number1 = params[:number1].to_i
+    number2 = params[:number2].to_i
+    operation = params[:operation]
+    if operation == "add"
+      answer = number1 + number2
+    elsif operation == "submtract"
+      answer = number1 - number2
+    elsif operation == "multiply"
+      answer = number1 * number2
+    elsif operation == "divide"
+      answer = number1 / number2
+    else
+      answer = "Not a correct operator"
+    end
+      answer.to_s
   end
 
 
